@@ -1,13 +1,13 @@
 package com.example.trustingsocialdemo.ui
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import com.example.basemodule.BaseActivity
 import com.example.trustingsocialdemo.R
 
-class MainActivity : AppCompatActivity() {
+class LoanPlanActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.loan_plan_activity)
     }
 }

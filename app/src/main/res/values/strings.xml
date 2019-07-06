@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">TrustingSocialDemo</string>
+    <string name="loan_limit_title">Thời hạn:</string>
+    <string name="amount_title">Han muc: </string>
+    <string name="interest">interest:</string>
+    <string name="submit_loan">Đăng ký vay</string>
+    <string name="thu_nhap">Thu Nhap</string>
+    <string name="input_identity">Nhap so CMND</string>
+    <string name="input_fullName">Nhap Fullname</string>
+    <string name="enter_phone">Nhap PHone</string>
 </resources>

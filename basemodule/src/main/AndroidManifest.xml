@@ -3,8 +3,7 @@
           package="com.example.basemodule">
 
     <application>
-        <activity android:name=".BaseActivity">
-        </activity>
+        <activity android:name=".BaseActivity"/>
     </application>
 
 </manifest>
