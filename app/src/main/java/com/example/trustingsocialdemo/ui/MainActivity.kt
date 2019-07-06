@@ -1,7 +1,8 @@
-package com.example.trustingsocialdemo
+package com.example.trustingsocialdemo.ui
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import com.example.trustingsocialdemo.R
 
 class MainActivity : AppCompatActivity() {
 
