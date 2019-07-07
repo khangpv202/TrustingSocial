@@ -36,7 +36,11 @@ fun validateIdentity(value: String): Boolean {
 
 
 fun validateFullName(value: String): Boolean {
-    return isEmpty(value)
+    return !isEmpty(value)
+}
+
+fun validateProvince(value: String): Boolean {
+    return !isEmpty(value)
 }
 
 fun validateIncome(value: String): Boolean {

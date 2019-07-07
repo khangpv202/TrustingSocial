@@ -2,6 +2,7 @@ package com.example.trustingsocialdemo.network
 
 import com.google.gson.annotations.SerializedName
 import com.google.gson.annotations.Expose
+import java.math.BigDecimal
 
 
 /**
@@ -11,17 +12,17 @@ import com.google.gson.annotations.Expose
 
 
 data class BankDTO(
-    @SerializedName("name") var name: String?,
-    @SerializedName("logo") var logo: String?
+    @SerializedName("name") var name: String?=null,
+    @SerializedName("logo") var logo: String?= null
 )
 
 data class OfferDTO(
     @SerializedName("min_amount")
     @Expose
-    var minAmount: Int? = null,
+    var minAmount: BigDecimal? = null,
     @SerializedName("max_amount")
     @Expose
-    var maxAmount: Int? = null,
+    var maxAmount: BigDecimal? = null,
     @SerializedName("min_tenor")
     @Expose
     var minTenor: Int? = null,

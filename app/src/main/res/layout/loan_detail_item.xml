@@ -4,7 +4,10 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         tools:showIn="@layout/loan_plan_activity"
-        android:layout_height="wrap_content" android:layout_width="match_parent">
+        android:paddingLeft="@dimen/_8dp"
+        android:paddingRight="@dimen/_8dp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
 
     <TextView android:layout_width="wrap_content"
               android:layout_height="wrap_content"
@@ -13,6 +16,7 @@
               app:layout_constraintStart_toStartOf="parent"
               android:text="@string/amount_title"/>
     <TextView android:layout_width="wrap_content"
+              android:id="@+id/tvMinMaxAmount"
               android:layout_height="wrap_content"
               app:layout_constraintEnd_toEndOf="parent"
               tools:text="(min_amount/max_amount)"
@@ -25,6 +29,7 @@
               app:layout_constraintStart_toStartOf="parent"/>
     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
               app:layout_constraintTop_toBottomOf="@+id/tvAmount"
+              android:id="@+id/tvMinMaxTenor"
               tools:text="(min_tenor/max_tenor)"
               app:layout_constraintEnd_toEndOf="parent"/>
 
@@ -35,20 +40,27 @@
               app:layout_constraintStart_toStartOf="parent"/>
     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
               app:layout_constraintTop_toBottomOf="@+id/tvTimeLimit"
+              android:id="@+id/tvInterestValue"
               tools:text="(interest_rate)"
               app:layout_constraintRight_toRightOf="parent"/>
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:gravity="center_vertical"
+                  app:layout_constraintTop_toBottomOf="@+id/tvInterest"
+                  app:layout_constraintEnd_toEndOf="parent"
+                  app:layout_constraintStart_toStartOf="parent">
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/tvBankName"
+                  tools:text="Bank 1"/>
+        <ImageView android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:scaleType="centerInside"
+                   android:adjustViewBounds="true"
+                   android:paddingLeft="@dimen/_16dp"
+                   android:id="@+id/ivBankLogo"/>
+    </LinearLayout>
 
-    <TextView android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:id="@+id/tvBankName"
-              tools:text="Bank 1"
-              app:layout_constraintTop_toBottomOf="@+id/tvInterest"
-              app:layout_constraintEnd_toEndOf="parent"
-              app:layout_constraintStart_toStartOf="parent"/>
-    <ImageView android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:id="@+id/ivBankLogo"
-               app:layout_constraintEnd_toEndOf="parent"
-               app:layout_constraintStart_toEndOf="@+id/tvBankName"
-               app:layout_constraintTop_toBottomOf="@+id/tvBankName"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

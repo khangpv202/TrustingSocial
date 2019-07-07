@@ -1,7 +1,7 @@
 package com.example.trustingsocialdemo.di
 
+import com.example.trustingsocialdemo.ui.LoanPlanViewModel
 import com.example.trustingsocialdemo.ui.UserFormViewModel
-import org.koin.android.ext.koin.androidContext
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
@@ -11,5 +11,6 @@ import org.koin.dsl.module
  */
 
 val viewModelModule = module {
-    viewModel { UserFormViewModel() }
+    viewModel { LoanPlanViewModel(get()) }
+    viewModel { UserFormViewModel(get()) }
 }
